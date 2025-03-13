@@ -45,7 +45,7 @@ const Corona = function Corona() {
 
         app.ticker.add(delta => {
             container.position.set(width / 2, height / 2);
-            //surrounding.rotation += 0.0009 * delta;
+            console.log(delta);
     
             //position
              surrounding.position.x = width /2;
