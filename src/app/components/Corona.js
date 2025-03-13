@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useCallback, useRef } from "react";
-import _ from "lodash";
 import * as PIXI from "pixi.js";
 import Perlin from "../util/perlin";
 import useWindowSize from "../util/useWindowSize";
