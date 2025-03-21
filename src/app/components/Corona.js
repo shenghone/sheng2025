@@ -43,9 +43,9 @@ const Corona = function Corona() {
 
         let phase = 0;
 
-        app.ticker.add(delta => {
+        app.ticker.add(_ => {
             container.position.set(width / 2, height / 2);
-            console.log(delta);
+   
     
             //position
              surrounding.position.x = width /2;
