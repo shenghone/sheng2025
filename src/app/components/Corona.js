@@ -94,11 +94,7 @@ const Corona = function Corona() {
     }
   },[init,windowSize])
 
-  useEffect(()=>{
-    window.addEventListener("resize", ()=>{
-        console.log(window.innerHeight);
-    });
-  },[])
+
 
     /*
   const handleMove = _.debounce(e => {
