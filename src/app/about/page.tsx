@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation'
 import gsap from "gsap"
 
 export default function Home() {
-  const path = usePathname();
+  //const path = usePathname();
   const blackRef = useRef(null);
-  const whiteRef = useRef(null)
+  //const whiteRef = useRef(null)
   const redRef = useRef(null);
   useEffect(()=>{
     if(blackRef.current && redRef.current){
