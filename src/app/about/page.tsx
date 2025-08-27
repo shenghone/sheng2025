@@ -1,7 +1,6 @@
 "use client"
 import {useEffect,useRef} from "react";
 import Sheng from "../components/Sheng";
-import { usePathname } from 'next/navigation'
 import gsap from "gsap"
 
 export default function Home() {
