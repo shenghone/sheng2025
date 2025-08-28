@@ -21,7 +21,7 @@ export default function Home() {
     }
     return "text-black"
   }
-  const contentGenerator = (idx: number) => {
+  const contentGenerator = (idx) => {
     if (idx === 1) {
       return (
         <section className="grid">
