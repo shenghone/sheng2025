@@ -40,8 +40,8 @@ export const useRandomtext = (textRef, index) => {
 };
 
 export const useWidth = () => {
+  const [width, setWidth] = useState(null);
   if (typeof window !== "undefined") {
-    const [width, setWidth] = useState(null);
     const resize = () => {
       let newWidth = window.innerWidth;
       setWidth(newWidth);
