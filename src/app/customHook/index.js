@@ -36,6 +36,7 @@ export const useRandomtext = (textRef, index) => {
       0.04
     );
   }, [textRef, index]);
+  return null;
 };
 
 export const useWidth = () => {
