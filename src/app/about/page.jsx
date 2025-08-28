@@ -3,7 +3,7 @@ import {useEffect,useRef,useState} from "react";
 import Sheng from "../components/Sheng";
 import {useRandomtext}  from "../customHook";
 import gsap from "gsap"
-import { section } from "framer-motion/client";
+
 
 export default function Home() {
   //const path = usePathname();

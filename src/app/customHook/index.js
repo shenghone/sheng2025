@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { TimelineMax, Power0, Power4 } from "gsap";
 import _ from "lodash";
 
