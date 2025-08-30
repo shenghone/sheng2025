@@ -25,7 +25,7 @@ export default function Home() {
     if (idx === 1) {
       return (
         <section className="grid">
-          <h6 ref={bioRef} className="font-[500] m-[auto] text-justify pl-[2rem] pr-[2rem]">
+          <h6 ref={bioRef} className="text-[rgba(27,27,31,0.9)] font-[500] m-[auto] text-justify pl-[2rem] pr-[2rem]">
           Born and raised in Taiwan, Sheng Hung Tsai moved to Canada in 2014. He
           loves all the beautiful things made with code. He is a creative
           thinker, a cat lover and a web developer .
@@ -35,7 +35,7 @@ export default function Home() {
     } else if (idx === 2) {
       return (
         <div ref={bioRef} className="place-self-center text-justify">
-          <h5>Seneca College 2018</h5>
+          <h5>Seneca College 2019</h5>
           <h6 className="text-[rgba(27,27,31,0.9)] font-[400]" >
             Diploma in Computer Programmer
           </h6>
@@ -87,7 +87,7 @@ export default function Home() {
       <section className="relative  w-[60%] h-[300px] grid place-self-center">
         <section className="absolute w-[100%] grid h-[100%] bg-white" ref={blackRef}>
           <section className="place-self-center">
-            <h2 ref={nameRef} className="tracking-[0.2rem] text-[1.1rem] font-bold text-[#747d8c] [&>div]:inline-block [&>div]:uppercase w-[100%]">
+            <h2 ref={nameRef} className="tracking-[0.4rem] text-[1.1rem] font-bold text-[#747d8c] [&>div]:inline-block [&>div]:uppercase w-[100%]">
               <div>s</div>
               <div>h</div>
               <div>e</div>
