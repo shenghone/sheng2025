@@ -64,7 +64,7 @@ export default function Home() {
       window.location.href =`mailto:${externalUrl}`
     }
   }
-  const contentGenerator = (idx:Number) => {
+  const contentGenerator = (idx:number) => {
     if (idx === 1) {
       return (
         <section className="grid">
