@@ -20,7 +20,7 @@ export default function Home() {
   const redRef = useRef(null);
   const [index,setIndex] = useState(1);
   useRandomtext(nameRef, index);
-  const getColour=(idx:Number,self:Number)=>{
+  const getColour=(idx:number,self:number)=>{
     if(idx===self){
       return "text-white"
     }
@@ -124,7 +124,7 @@ export default function Home() {
         onComplete:()=>setAnimated(true)
       })
     }
-  },[blackRef.current,redRef.current,meCateRef.current])
+  },[])
   return (
     <div className="grid relative h-[100vh] w-[100vw] font-[family-name:var(--font-geist-sans)]">
       <Sheng/>
