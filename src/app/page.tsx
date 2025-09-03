@@ -24,19 +24,19 @@ export default function Home() {
       tl.to(leftRef.current,{duration:0.5, height:"100%"}).to(topRef.current,{duration:0.5,width:"100%"}).to(rightRef.current,{duration:0.5,height:"100%"}).to(bottomRef.current,{duration:0.5,width:"100%",onComplete:()=>{
         setAnimEnded(false)
       }})
-      
+      //https://tympanus.net/codrops/2016/06/01/multi-layer-page-reveal-effects/
       t1.to(blockerRef.current,{ keyframes: {
         "0%":   { transform: "translate3d(0, 0, 0)"},
         "25%, 75%":  { transform: "translate3d(0, -100%, 0)"}, // finetune with individual eases
         "100%": { transform: "translate3d(0, -200%, 0)"},
          easeEach: 'expo.inOut' // ease between keyframes
-       },duration:1.5,delay:2})
+       },duration:1.3,delay:2,onComplete:()=>setCompleted(true)})
        t2.to(yellowRef.current,{keyframes: {
         "0%, 12.5%":   { transform: "translate3d(0, 0, 0)"},
         "37.5%, 62.5%":  { transform: "translate3d(0, -100%, 0)"}, // finetune with individual eases
         "87.5%, 100%": { transform: "translate3d(0, -200%, 0)"},
          easeEach: 'expo.inOut' // ease between keyframes
-       },duration:1.5,delay:2.2,onComplete:()=>setCompleted(true)})
+       },duration:1.5,delay:2.2})
        t3.to(redRef.current, {keyframes:{
         "0%, 25%":{transform: "translate3d(0, 0, 0)"},
         "75%, 100%":{transform: "translate3d(0, -200%, 0)"},

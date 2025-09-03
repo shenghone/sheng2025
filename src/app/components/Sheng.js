@@ -56,7 +56,7 @@ const Sheng = function (){
                         <span ref={span2Ref} className={`${checkPath("/projects","bar")} absolute left-0 bottom-0 h-[2px] w-[0%]`}></span>
                     </Link>
                     <Link  data-active={checkPath("/work","active")} href="/work" onMouseEnter={()=>animate(span3Ref)}  onMouseLeave={()=>handleLeave(span3Ref)} className={`${checkPath("/work","text")} relative cursor-pointer uppercase hover:opacity-75 transition delay-150 duration-700`}>
-                        work
+                        blog
                         <span ref={span3Ref} className={`${checkPath("/work","bar")} absolute left-0 bottom-0 h-[2px] w-[0%]`}></span>
                     </Link>
                 </div>
