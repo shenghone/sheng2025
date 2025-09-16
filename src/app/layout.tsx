@@ -1,4 +1,3 @@
-"use client";
 import type { Metadata } from "next";
 import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
 import { Geist, Geist_Mono } from "next/font/google";
