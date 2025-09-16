@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ApolloProvider } from "@apollo/client/react";
@@ -18,11 +17,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-  title: "Sheng Hung Tsai",
-  description: "Since 1990",
-};
 
 const TempWrapper = ({
   children,
