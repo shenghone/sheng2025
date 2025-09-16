@@ -1,14 +1,9 @@
 "use client";
-import type { Metadata } from "next";
+
 import { useState, useRef } from "react";
 import Corona from "./components/Corona";
 import Sheng from "./components/Sheng";
 import gsap from "gsap";
-
-export const metadata: Metadata = {
-  title: "Sheng Hung Tsai",
-  description: "Since 1990",
-};
 
 export default function Home() {
   const [completed, setCompleted] = useState(false);
