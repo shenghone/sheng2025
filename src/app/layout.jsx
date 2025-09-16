@@ -5,7 +5,7 @@ import { ApolloProvider } from "@apollo/client/react";
 import "./globals.css";
 
 const client = new ApolloClient({
-  link: new HttpLink({ uri: "https://sheng2025-backend.vercel.app/graphql"}),
+  link: new HttpLink({ uri: process.env.NEXT_PUBLIC_BACK_END}),
   cache: new InMemoryCache(),
 });
 
