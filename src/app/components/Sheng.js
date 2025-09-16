@@ -8,7 +8,6 @@ const Sheng = function (){
     const path = usePathname();
     const span1Ref = useRef(null);
     const span2Ref = useRef(null);
-    const span3Ref = useRef(null);
     const animate = (el)=>{
         gsap.to(el.current,{duration:0.7, width:"100%"})
     }
