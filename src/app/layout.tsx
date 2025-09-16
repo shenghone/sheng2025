@@ -1,3 +1,4 @@
+"use client";
 import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ApolloProvider } from "@apollo/client/react";
