@@ -44,9 +44,9 @@ const Sheng = function (){
         });
     }
     return (
-        <section className="flex font-semibold absolute p-8 gap-4 w-screen z-999">
+        <section className="flex h-[100px] absolute p-8 gap-4 w-screen z-999">
                 <Link href="/" className="cursor-pointer "><h3 className="font-semibold tracking-widest hover:opacity-75 transition delay-150 duration-700 cursor-pointer uppercase text-white">sheng</h3></Link>
-                <div className="flex absolute right-0 pr-8 gap-4 box-border">
+                <div className="flex absolute right-0 pr-8 gap-4 box-border font-normal text-[14px]">
                     <Link  data-active={checkPath("/about","active")} href="/about" onMouseEnter={()=>animate(span1Ref)}  onMouseLeave={()=>handleLeave(span1Ref)} className={`${checkPath("/about","text")} relative cursor-pointer uppercase hover:opacity-75 transition delay-150 duration-700`}>
                         about
                         <span ref={span1Ref}  className={`${checkPath("/about","bar")} absolute left-0 bottom-0 h-[2px] w-[0%]`}></span>

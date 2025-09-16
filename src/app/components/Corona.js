@@ -109,7 +109,7 @@ const Corona = function Corona() {
     */
   
   return (
-    <div style={{ zIndex: "-1" }}>
+    <div className="bg-black absolute w-[100%] h-[100%]">
       <canvas
         className="coronaWrapper"
         ref={canvasRef}
