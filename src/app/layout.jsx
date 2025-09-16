@@ -19,19 +19,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const TempWrapper = ({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) => {
+const TempWrapper = ({ children }) => {
   return <ApolloProvider client={client}>{children}</ApolloProvider>;
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <TempWrapper>
       <html
