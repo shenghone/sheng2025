@@ -42,7 +42,7 @@ export default function RootLayout({
     <TempWrapper>
       <html
         lang="en"
-        className=" className={`relative ${geistSans.variable} ${geistMono.variable} antialiased relative`}"
+        className={`relative ${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <body>{children}</body>
       </html>
