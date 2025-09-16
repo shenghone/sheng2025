@@ -57,7 +57,7 @@ function projects() {
       setCurrentProject(ProjectData.Projects[0])
     }
   },[ProjectData])
-  console.log(`The data is: +${ProjectData}`)
+
   useEffect(()=>{
     gsap.set([...projectBarArea.current.children],{
       y:10,
