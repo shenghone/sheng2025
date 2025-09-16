@@ -74,6 +74,7 @@ function projects() {
       },
     });
   },[ProjectData])
+   //removed data printing
   useEffect(()=>{
     if(currentProject!=null){
       setDoneAnimation("animating")
