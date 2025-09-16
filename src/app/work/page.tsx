@@ -1,6 +1,5 @@
 "use client";
 import Sheng from "../components/Sheng";
-import { usePathname } from "next/navigation";
 
 export default function Home() {
   return (
