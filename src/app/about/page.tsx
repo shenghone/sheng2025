@@ -120,28 +120,28 @@ export default function Home() {
       gsap.set(blackRef.current, {
         width: "100%",
         height: "100%",
-      }),
-        gsap.to(blackRef.current, {
-          width: () => {
-            if (width >= 680) {
-              return "50%";
-            } else {
-              return "100%";
-            }
-          },
-          height: () => {
-            //size.width < 1024 ? "50%" : "",
-            if (width >= 1024) {
-              return "";
-            } else if (width < 1024 && width >= 680) {
-              return "50%";
-            } else {
-              return "100%";
-            }
-          },
-          duration: 1.6,
-          delay: 1.8,
-        });
+      });
+      gsap.to(blackRef.current, {
+        width: () => {
+          if (width >= 680) {
+            return "50%";
+          } else {
+            return "100%";
+          }
+        },
+        height: () => {
+          //size.width < 1024 ? "50%" : "",
+          if (width >= 1024) {
+            return "";
+          } else if (width < 1024 && width >= 680) {
+            return "50%";
+          } else {
+            return "100%";
+          }
+        },
+        duration: 1.6,
+        delay: 1.8,
+      });
 
       gsap.set(redRef.current, {
         height: size.width < 1024 ? 0 : "100%",
