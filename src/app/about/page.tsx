@@ -74,7 +74,7 @@ export default function Home() {
         <section className="grid">
           <h6
             ref={bioRef}
-            className="text-[rgba(27,27,31,0.9)] font-[500] m-[auto] text-justify pl-[2rem] pr-[2rem]"
+            className="text-[rgba(27,27,31,0.9)] max-sm:text-sm font-[500] m-[auto] text-justify pl-[2rem] pr-[2rem]"
           >
             Born and raised in Taiwan, Sheng Hung Tsai moved to Canada in 2014.
             He loves all the beautiful things made with code. He is a creative
@@ -97,7 +97,10 @@ export default function Home() {
       );
     } else {
       return (
-        <div ref={bioRef} className="place-self-center text-justify">
+        <div
+          ref={bioRef}
+          className="place-self-center max-sm:text-sm max-sm:p-5 text-justify"
+        >
           <h5>Front end</h5>
           <h6 style={{ fontWeight: "400", color: "rgba(27,27,31,0.9)" }}>
             React, Redux, Pixi, Next, GSAP, Apollo Client
@@ -112,26 +115,65 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (blackRef.current && redRef.current && meCateRef.current) {
-      gsap.to(blackRef.current, {
-        width: size.width >= 1024 ? "50%" : "",
-        height: size.width < 1024 ? "50%" : "",
-        duration: 1.6,
-        delay: 1.8,
-      });
+    if (blackRef.current && redRef.current && meCateRef.current && size) {
+      const { width } = size;
+      gsap.set(blackRef.current, {
+        width: "100%",
+        height: "100%",
+      }),
+        gsap.to(blackRef.current, {
+          width: () => {
+            if (width >= 680) {
+              return "50%";
+            } else {
+              return "100%";
+            }
+          },
+          height: () => {
+            //size.width < 1024 ? "50%" : "",
+            if (width >= 1024) {
+              return "";
+            } else if (width < 1024 && width >= 680) {
+              return "50%";
+            } else {
+              return "100%";
+            }
+          },
+          duration: 1.6,
+          delay: 1.8,
+        });
 
       gsap.set(redRef.current, {
         height: size.width < 1024 ? 0 : "100%",
         opacity: 0,
-        zIndex: -1,
+        y: 0,
       });
 
       gsap.to(redRef.current, {
         width: size.width >= 1024 ? "50%" : "",
-        height: size.width < 1024 ? "100%" : "",
+        height: () => {
+          //size.width < 1024 ? "100%" : "",
+          if (width >= 1024) {
+            return "100%";
+          } else if (width < 1024 && width >= 680) {
+            return "100%";
+          } else if (width < 680) {
+            return "50%";
+          } else {
+            return "100%";
+          }
+        },
+        y: () => {
+          if (width < 680) {
+            return "100%";
+          } else {
+            return "";
+          }
+        },
         transformOrigin: size.width < 1024 ? "bottom" : "right",
         duration: 1.5,
         delay: 2,
+        zIndex: 99999,
         opacity: size.width < 1024 ? 1 : "",
       });
       gsap.to(meCateRef.current, {
@@ -139,6 +181,7 @@ export default function Home() {
         delay: 3.5,
         duration: 0.5,
         display: "block",
+        zIndex: 999,
         onComplete: () => setAnimated(true),
       });
     }
@@ -147,9 +190,9 @@ export default function Home() {
   return (
     <div className="grid relative h-[100vh] w-[100vw] font-[family-name:var(--font-geist-sans)]">
       <Sheng />
-      <section className="relative z-0 w-[60%] lg:h-[300px] sm:h-[400px] grid lg:grid-rows-[1fr] md:grid-rows-[1fr_1fr] md:grid-cols-[1fr] place-self-center  after:z-1">
+      <section className="relative z-0 w-[60%] lg:h-[300px] max-sm:h-[500px] grid lg:grid-rows-[1fr] md:grid-rows-[1fr_1fr] md:grid-cols-[1fr] place-self-center  after:z-1">
         <section
-          className="relative sm:row-start-1 sm:row-span-2 md:col-start-1 md:col-span-2  w-[100%] grid bg-white z-1"
+          className="relative sm:row-start-1 sm:row-span-2 md:col-start-1 md:col-span-2 w-[100%] grid bg-white z-1"
           ref={blackRef}
         >
           <section
@@ -178,7 +221,7 @@ export default function Home() {
           <section className="place-self-center absolute">
             <h2
               ref={nameRef}
-              className="tracking-[0.4rem] text-[1.1rem] font-bold text-[#747d8c] [&>div]:inline-block [&>div]:uppercase w-[100%]"
+              className="tracking-[0.4rem] max-sm:text-sm text-[1.1rem] font-bold text-[#747d8c] [&>div]:inline-block [&>div]:uppercase w-[100%]"
             >
               <div>s</div>
               <div>h</div>
@@ -199,12 +242,12 @@ export default function Home() {
           </section>
         </section>
         <section
-          className="absolute grid-cols-[1fr] isolate lg:row-start-1 z-[-1] lg:col-start-1 sm:row-start-2 sm:row-span-1 sm:col-start-1 grid-rows-[auto_1fr] h-[100%] bg-red-500 justify-self-end"
+          className="absolute grid-cols-[1fr] lg:row-start-1 z-[-1] lg:col-start-1 sm:row-start-2 sm:row-span-1 sm:col-start-1 grid-rows-[auto_1fr] h-[100%] w-[100%] bg-red-500 justify-self-end"
           ref={redRef}
         >
           <div
             ref={meCateRef}
-            className="text-right hidden isolate z-99 h-[100%]"
+            className="relative text-right hidden isolate z-99 h-[100%] w-[100%]"
           >
             <section
               ref={meSectionRef}
