@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { GithubIcon, Mail01FreeIcons } from "@hugeicons/core-free-icons";
 
-export default () => {
+const About = () => {
   const whiteRef = useRef<HTMLDivElement | null>(null);
   const redRef = useRef<HTMLDivElement | null>(null);
   const nameRef = useRef<HTMLHeadingElement | null>(null);
@@ -566,3 +566,5 @@ export default function Home() {
   );
 }
 */
+
+export default About;
