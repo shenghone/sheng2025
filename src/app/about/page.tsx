@@ -49,13 +49,16 @@ const About = () => {
       );
     } else if (idx === 2) {
       return (
-        <div ref={bioRef} className="place-self-center text-justify">
+        <div
+          ref={bioRef}
+          className="max-sm:text-sm place-self-center text-justify"
+        >
           <h5>Seneca College 2019</h5>
-          <h6 className="text-[rgba(27,27,31,0.9)] font-[400]">
+          <h6 className="text-[rgba(27,27,31,0.9)]  font-[400]">
             Diploma in Computer Programmer
           </h6>
           <h5>Fu-Jen Univerisity 2013</h5>
-          <h6 className="text-[rgba(27,27,31,0.9)] font-[400]">
+          <h6 className="text-[rgba(27,27,31,0.9)]  font-[400]">
             BBA in International Business
           </h6>
         </div>
