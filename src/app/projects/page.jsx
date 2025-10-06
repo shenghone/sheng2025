@@ -161,9 +161,9 @@ function projects() {
   },[currentProject])
 
   return (
-    <div className="grid relative lg:h-[100vh] w-[100vw] font-[family-name:var(--font-geist-sans)] md:grid-rows-[100px_calc(100vh-100px)] sm:grid-rows-[100px_auto]">
+    <div className="grid relative lg:h-[100vh] w-[100vw] font-[family-name:var(--font-geist-sans)] md:grid-rows-[100px_calc(100vh-100px)] max-md:grid-rows-[100px_auto]">
       <Sheng />
-      <section className="relative grid place-self-center overflow-hidden lg:min-h-[300px] lg:h-[60vh] sm:min-h-[600px] sm:h-[75vh] min-w-[70vw] row-span-1 row-start-2 lg:grid-rows-[325px_80px] sm:grid-rows-[500px_80px] grid-column-[1fr]">
+      <section className="relative grid place-self-center overflow-hidden lg:min-h-[300px] lg:h-[60vh] max-md:min-h-[600px] max-md:h-[75vh] max-w-[70vw] row-span-1 row-start-2 lg:grid-rows-[325px_80px] sm:grid-rows-[500px_80px] grid-column-[1fr]">
         <section className="grid relative lg:mih-h-[450px] row-start-1 row-span-1 w-[100%]">
           <section ref={topRef} className="absolute bg-black w-[100%] h-[50%] z-999"></section>
           <section ref={bottomRef} className="absolute bg-black bottom-0 w-[100%] h-[50%] z-999"></section>
